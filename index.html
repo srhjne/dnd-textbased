@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"> 
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="Character.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="content">
+<div id="previous-moves"></div>
+<form id="question-form" action="#">
+<h3 id="questionH">Question? </h3>
+<input id="answer" type="text"></input>
+<input type="submit" hidden />
+
+
+</form>
+</div>
+</body>
+<script>
+	$("#question-form").on("submit", function(evt){
+		evt.preventDefault();
+		console.log("running stuff")
+		$("#previous-moves").append($("#questionH").html());
+		$("#previous-moves").append("<br>");
+		$("#previous-moves").append($("#answer").val());
+		$("#previous-moves").append("<br>");
+		$("#questionH").html("Next Question")
+		console.log($("#answer").val())
+	})
+
+</script>
+</html>
