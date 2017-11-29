@@ -45,5 +45,5 @@ var Enemy = function(stats){
 var attacks = {"rapier":{AB:5, dice:1, dice_type:8}, "shortbow":{AB:5, dice:1, dice_type:6}}
 var player = new Character({attacks: attacks, day:0, XP:0, HP:8, money: 15, dex: 3, wis:1, con:1, char:-1, level:1, int: 2, AC:14});
 
-var attacks = {"rapier":{AB:5, dice:1, dice_type:8}}
+var attacks = {"scimitar":{AB:5, dice:1, dice_type:6}, "shortbow":{AB:5, dice:1, dice_type:6}}
 var goblin = new Enemy({attacks: attacks,HP:8, dex:0 ,wis:0, con:0,char:0,int:0, AC:10});

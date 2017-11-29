@@ -48,7 +48,7 @@ var attack_round = function(weapon, playerHP, goblinHP){
 		if (playerHP <= 0){
 			return new StoryElement("Sorry you died! Please refresh to restart game", [])
 		}
-		var desc = "The goblin attacks with his "+attack+" and deals "+damage+" damage";
+		var desc = "The goblin attacks with his "+attack_name+" and deals "+damage+" damage";
 	}
 	return new StoryElement(p_desc+"<br>"+desc+"<br> It's your turn <br> Type 1 to use your rapier, Type 2 to use your shortbow.",[attack_round("rapier", playerHP, goblinHP), attack_round("shortbow", playerHP, goblinHP)]);
 }
@@ -65,7 +65,7 @@ var goblin_attack = function(playerHP, goblinHP){
 		if (playerHP <= 0){
 			return new StoryElement("Sorry you died! Please refresh to restart game", [])
 		}
-		var desc = "The goblin attacks with his "+attack+" and deals "+damage+" damage";
+		var desc = "The goblin attacks with his "+attack_name+" and deals "+damage+" damage";
 	}
 	return new StoryElement(desc+"<br> It's your turn <br> Type 1 to use your rapier, Type 2 to use your shortbow.",[attack_round("rapier", player.HP, goblin.HP), attack_round("shortbow", player.HP, goblin.HP)]);
 
