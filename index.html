@@ -18,7 +18,10 @@
 </form>
 </div>
 </body>
+<script src="story_graph.js"></script>
 <script>
+	$("#questionH").html(road_setup.text);
+	var current = road_setup;
 	$("#question-form").on("submit", function(evt){
 		evt.preventDefault();
 		console.log("running stuff")
@@ -26,7 +29,12 @@
 		$("#previous-moves").append("<br>");
 		$("#previous-moves").append($("#answer").val());
 		$("#previous-moves").append("<br>");
-		$("#questionH").html("Next Question")
+		var answer = parseInt($("#answer").val());
+		if (answer <= current.children.length && answer > 0){
+			current = current.children[answer - 1]
+		}
+
+		$("#questionH").html(current.text);
 		console.log($("#answer").val())
 	})
 
